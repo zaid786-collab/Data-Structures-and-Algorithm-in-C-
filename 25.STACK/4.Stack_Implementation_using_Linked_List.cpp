@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+// Stack Implementation without Linked List default methods 
 template<class T>
 class node {
 public:
