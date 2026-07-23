@@ -22,6 +22,7 @@ public:
         head = NULL;
     }
 
+    //PushFront in ll
     void push (T val){
         node<T>* newnode = new node<T>(val);
 
@@ -33,6 +34,7 @@ public:
         }
     }
 
+    //Pop Front in ll
     void pop() {
         node<T>* temp = head;
         head = head->next;
