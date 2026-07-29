@@ -56,7 +56,7 @@ void InfixtoPostfix(string s) {
 }
 
 int main () {
-    string s = "(p+q)*(m-n)";
+    string s = "(p+q)*(m-n)/(a*b)";
     cout << "Infix Expressions : " << s << endl;
 
     InfixtoPostfix(s);
