@@ -17,7 +17,7 @@ void nextGreater (vector<int> arr,vector<int> &ans) {
     for(int i=idx-1;i >=0 ;i--){
         int curr = arr[i];
 
-        while(!s.empty() && curr >= s.top()){     // Until next greater is not found keep on removing elements from stack
+        while(!s.empty() && curr >= s.top()){     // Until next greater is not found keep on removing smaller elements from stack and then top will be elemnt that is greater then curr or stack will get empty.
             s.pop();
         }
 
