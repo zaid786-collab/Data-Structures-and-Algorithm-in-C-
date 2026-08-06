@@ -1,9 +1,13 @@
-#include<bits/stdc++.h>
-using namespace std;
-
 // Time Complexity : O(n)
 
 // Same concept of Stock Span Problem where to put elements in stack and compare but here finding next greater not previous one.
+
+// Loop will begin from last to first as there is no greater element on right to last element.
+// Next Greater : Next Greater to right of the number.
+
+#include<bits/stdc++.h>
+using namespace std;
+
 void nextGreater (vector<int> arr,vector<int> &ans) {
     stack<int> s;
     int idx = arr.size() - 1; 
@@ -17,12 +21,12 @@ void nextGreater (vector<int> arr,vector<int> &ans) {
             s.pop();
         }
 
-        // Especial Case when Stack gets Empty
+        // Special Case when Stack gets Empty as there is no elemnet on right of the curr number.
         if(s.empty()){
             ans[i] = -1;
         }
         else{
-            ans[i] = s.top();
+            ans[i] = s.top();               // Adding next greater element for each element.
         }
 
         s.push(curr);     // Push each element to the stack as it can be next greater
