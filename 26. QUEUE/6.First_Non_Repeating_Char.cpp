@@ -2,7 +2,7 @@
 using namespace std;
 
 int main () {
-    string s = "aabcxbx";
+    string s = "aabccxb";
     vector<int> freq(26);
     int n = s.length();
     queue<char> q1;
@@ -16,10 +16,10 @@ int main () {
         }
 
         if(q1.empty()) {
-            cout << -1 << endl;
+            cout << -1 << " ";
         }
         else {
-            cout << q1.front() << endl;
+            cout << q1.front() << " ";
         }
     }
 
